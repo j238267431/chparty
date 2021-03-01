@@ -1,0 +1,27 @@
+.art{
+    position: absolute;
+    width: 410.94px;
+    height: 410.94px;
+    left: 592.47px;
+    top: -329px;
+    background: #FFF4E0;
+    border-radius: 100%;
+}
+.art_2{
+    position: absolute;
+    width: 395.17px;
+    height: 395.17px;
+    left: 0px;
+    top: 158px;
+    background: #EAEFE2;
+    border-radius: 100%;
+}
+.art_2_circle{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 0px;
+    top: 158px;
+    background: white;
+    border-radius: 100%;
+}
