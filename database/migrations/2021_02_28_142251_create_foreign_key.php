@@ -13,9 +13,12 @@ class CreateForeignKey extends Migration
      */
     public function up()
     {
-        Schema::table('users', function (Blueprint $table) {
-            $table->foreign('id')->references('from_user_id')->on('messages');
-            $table->foreign('id')->references('to_user_id')->on('messages');
+        Schema::table('messages', function (Blueprint $table) {
+            $table->foreign('from_user_id')->references('id')->on('users');
+            $table->foreign('to_user_id')->references('id')->on('users');
+
+//            $table->foreign('id')->references('from_user_id')->on('messages');
+//            $table->foreign('id')->references('to_user_id')->on('messages');
         });
     }
 
@@ -26,7 +29,9 @@ class CreateForeignKey extends Migration
      */
     public function down()
     {
-        Schema::table('users', function (Blueprint $table) {
+        Schema::table('messages', function (Blueprint $table) {
+//            $table->dropForeign('from_user_id');
+//            $table->dropForeign('to_user_id');
         });
     }
 }

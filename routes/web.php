@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,7 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [App\Http\Controllers\IndexController::class, 'index']);
 
 Auth::routes();
-Route::get('/message', [\App\Http\Controllers\MessageController::class, 'index'])->name('message');
-Route::get('/message/send',[\App\Http\Controllers\MessageController::class, 'send']);
+Route::get('/message', [App\Http\Controllers\MessageController::class, 'index'])->name('message');
+Route::get('/message/send',[App\Http\Controllers\MessageController::class, 'send']);
+Route::get('/message/create',[App\Http\Controllers\MessageController::class, 'create']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/carousel', [\App\Http\Controllers\IndexController::class, 'showCarousel']);
+Route::get('/carousel', [App\Http\Controllers\IndexController::class, 'showCarousel']);
