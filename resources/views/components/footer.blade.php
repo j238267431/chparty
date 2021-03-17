@@ -13,3 +13,4 @@
             <div>&copy; {{\Carbon\Carbon::now()->year}} Ch Party</div>
         </div>
     </div>
+

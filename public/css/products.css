@@ -1,0 +1,24 @@
+.product_li{
+    list-style-type: none;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+    margin-bottom: 20px;
+}
+.product_li:first-letter{
+    text-transform: capitalize;
+}
+
+.product_header{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 0.2px;
+}
+.product_header:first-letter{
+    text-transform: capitalize;
+}

@@ -1,0 +1,49 @@
+.proposal_block_image{
+    display: flex;
+    margin-bottom: 32px;
+}
+
+#myform p {
+     text-align : center;
+     margin : 10px 0;
+ }
+#myform #myfile {
+    display : none;
+}
+#myform #mylabel {
+    text-align: center;
+    background: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*padding: 10px 20px;*/
+    color: white;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    margin-right: 32px;
+    border: 1px solid blue;
+    border-radius: 10%;
+}
+#myform #mylabel:hover {
+    text-align: center;
+    background: white;
+    display: flex;
+    align-items: center;
+    /*padding: 10px 20px;*/
+    color: blue;
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+    margin-right: 32px;
+    border: 1px solid blue;
+    border-radius: 10%;
+}
+
+.proposal_image{
+    width: 150px;
+    height: 150px;
+    border-radius: 10%;
+}
+
+
