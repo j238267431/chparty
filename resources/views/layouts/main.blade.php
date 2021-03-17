@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+z
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -32,15 +32,18 @@
     <link href="{{ asset('css/home.css') }}" rel="stylesheet">
     <link href="{{ asset('css/message.css') }}" rel="stylesheet">
     <link href="{{ asset('css/carousel.css') }}" rel="stylesheet">
-
+    <link href="{{ asset('css/proposal.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/products.css') }}" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body style="overflow-x: hidden;">
 
     <div id="app">
         <x-header/>
-        <x-art/>
-        <main class="py-4">
 
+        <main class="py-4">
+{{--            <x-art/>--}}
             @yield('content')
             <x-modal></x-modal>
 
@@ -54,15 +57,16 @@
 @push('js')
 <script>
 function showModal() {
+    event.preventDefault();
     document.getElementById('modal_back').classList.remove('modal_display_none');
     document.getElementById('modal_register').classList.remove('modal_display_none');
 }
 function closeModal(){
+    event.preventDefault();
     document.getElementById('modal_back').classList.add('modal_display_none');
     document.getElementById('modal_register').classList.add('modal_display_none');
 }
 function getMessageScreen(){
-    // var homeScreens = $('#home_screens');
     event.preventDefault();
     $.ajax({
         url: '/message',
@@ -99,6 +103,14 @@ function sendMessage(){
      }
  })
 }
+
+    jQuery(function(){
+    $("#myfile").change(function(){ // событие выбора файла
+        $("#myform").submit(); // отправка формы
+    });
+});
+
+
 </script>
 @endpush
 @stack('js')

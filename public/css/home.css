@@ -13,7 +13,6 @@
 }
 .home_main{
     display: flex;
-    justify-content: space-between;
 
 }
 .home_ul{
@@ -49,6 +48,7 @@
     margin-bottom: 32px;
     padding: 0px 32px;
     outline: none;
+    border: none;
 }
 .home_button{
     margin-top: 40px;
@@ -58,7 +58,33 @@
     background: #B9C99D;
     border-radius: 24px;
     outline: none;
+    border: none;
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #312A19;
 }
+#remember{
+    font-family: Raleway;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 14px;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    color: #C4C4C4;
+}
+
 .home_middle{
     margin-top: 32px;
+}
+
+.rate{
+    text-align: center;
+
+}
+.rate:first-letter{
+    text-transform: capitalize;
 }

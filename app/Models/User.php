@@ -6,9 +6,13 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Cmgmyr\Messenger\Traits\Messagable;
+
+
 
 class User extends Authenticatable
 {
+    use Messagable;
     use HasFactory, Notifiable;
 
     /**
@@ -20,6 +24,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
