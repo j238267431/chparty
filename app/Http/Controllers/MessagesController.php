@@ -91,9 +91,9 @@ class MessagesController extends Controller
      *
      * @return mixed
      */
-    public function store()
+    public function store(Request $request)
     {
-        $input = Request::all();
+        $input = $request->all();
 
         $thread = Thread::create([
             'subject' => $input['subject'],
@@ -114,7 +114,7 @@ class MessagesController extends Controller
         ]);
 
         // Recipients
-        if (Request::has('recipients')) {
+        if ($request->has('recipients')) {
             $thread->addParticipant($input['recipients']);
         }
 

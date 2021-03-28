@@ -66,25 +66,25 @@ function closeModal(){
     document.getElementById('modal_back').classList.add('modal_display_none');
     document.getElementById('modal_register').classList.add('modal_display_none');
 }
-function getMessageScreen(){
-    event.preventDefault();
-    $.ajax({
-        url: '/message',
-        data: {},
-        headers: {
-            'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
-        },
-        success: function (data)
-        {
-            $('#home_screens').html(data)
-        },
-        error: function (msg)
-        {
-            console.log(msg)
-        }
-
-    })
-}
+// function getMessageScreen(){
+//     event.preventDefault();
+//     $.ajax({
+//         url: '/message',
+//         data: {},
+//         headers: {
+//             'X-CSRF-Token': $('meta[name="csrf-token"]').attr('content'),
+//         },
+//         success: function (data)
+//         {
+//             $('#home_screens').html(data)
+//         },
+//         error: function (msg)
+//         {
+//             console.log(msg)
+//         }
+//
+//     })
+// }
 function sendMessage(){
  var message = $('#message_sender').val();
  $.ajax({
