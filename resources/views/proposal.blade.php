@@ -13,7 +13,7 @@
         </div>
         <form name=loadavatar class="proposal_form" action="{{route('proposal.store')}}" method="POST" enctype="multipart/form-data">
             @csrf
-            <input type="hidden" name="image" value="{{session('url')}}">
+            <input type="hidden" name="image" value="@if(session('url')){{session('url')}}@endif">
             <label for="proposal_text"></label>
             <div><textarea placeholder="расскажите о вашем предложении. Не забудьте указать цену." name="description" id="proposal_text" cols="80" rows="3"></textarea></div>
             <select name="category" id="">
